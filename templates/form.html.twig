@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+Erstellung von Gewinnspielcodes
+{% endblock %}
+
+{% block body %}
+<h3>Erstellung von Gewinnspielcodes</h3>
+<form method="POST" action="/generate_codes.csv">
+    <label for="available_chars">Erlaubte Zeichen:</label><br/>
+    <input type="text" id="available_chars" name="available_chars" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"><br/>
+    <label for="len_codes">Länge der Codes:</label><br/>
+    <input type="text" id="len_codes" name="len_codes" value="6"><br/>
+    <label for="num_codes">Anzahl der Codes:</label><br/>
+    <input type="text" id="num_codes" name="num_codes" value="10"><br/>
+    <input type="submit">
+</form>
+{% endblock %}

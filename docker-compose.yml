@@ -5,12 +5,12 @@ services:
   php-fpm:
     image: php:fpm-alpine
     volumes:
-      - {$PWD}:/var/www
+      - ${PWD}:/var/www
 
   nginx:
     image: nginx
     volumes:
-      - {$PWD}:/var/www
+      - ${PWD}:/var/www
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/sites/:/etc/nginx/sites-available
       - ./nginx/conf.d/:/etc/nginx/conf.d
